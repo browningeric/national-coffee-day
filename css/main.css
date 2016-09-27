@@ -1,0 +1,109 @@
+body {
+	font: caption;
+	font-size: 1rem;
+	line-height: 1.3;
+	margin: 1.25em;
+}
+
+h1 {
+	font-family: 'matosans';
+	font-size: 2.8rem;
+	text-align: center;
+}
+
+@font-face {
+	font-display: swap;
+    font-family: 'matosans';
+    src: url('../fonts/matosans.woff2') format('woff2'),
+         url('../fonts/matosans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main {
+	display: block;
+	width: 100%;
+}
+
+p {
+	font-size: 1rem;
+}
+
+#logo-graphic-container {
+	height: 100vh;
+	left: -200px;
+	position: absolute;
+	top: -20px;
+	width: 100vw;
+}
+
+.main-logo {
+	display: block;
+	max-width: 150px;
+}
+
+.icon-1 { 
+	width: 100px; 
+	height: 100px; 
+	transform-origin: 200% center; 
+	position: absolute; 
+	animation: rotate 3s linear infinite; 
+}
+.icon-1:before { 
+	border-radius: 50%;
+	content: ''; 
+	position: absolute; 
+	height: 100%; 
+	width: 100%; 
+	background: #fcc; 
+	animation: rotate 3s linear reverse infinite; 
+}
+
+.ring {
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	height: auto;
+	position: absolute;
+
+}
+
+.ring-1 {
+	left: -10%;
+	padding-top: 100%;
+	top: 0%;
+	width: 100%;
+}
+
+.ring-2 {
+	left: -10%;
+	width: 120%;
+	padding-top: 120%;
+	top: -5%;
+}
+
+.ring-3 {
+	left: -20%;
+	width: 150%;
+	padding-top: 150%;
+	top: -10%;
+}
+
+.ring-4 {
+	left: -30%;
+	width: 180%;
+	padding-top: 180%;
+	top: -15%;
+}
+
+@keyframes rotate { 
+	100% { 
+		transform:rotate(-360deg); 
+	} 
+}
+
+@media screen and (min-width: 600px) {
+	body {
+		font-size: 20px;
+		line-height: 1.3;
+	}
+}
