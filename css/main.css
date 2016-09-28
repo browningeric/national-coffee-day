@@ -1,16 +1,3 @@
-body {
-	font: caption;
-	font-size: 1rem;
-	line-height: 1.3;
-	margin: 1.25em;
-}
-
-h1 {
-	font-family: 'matosans';
-	font-size: 2.8rem;
-	text-align: center;
-}
-
 @font-face {
 	font-display: swap;
     font-family: 'matosans';
@@ -18,6 +5,32 @@ h1 {
          url('../fonts/matosans.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+body {
+	background: url('../images/bg-pattern.gif');
+	color: #333;
+	font: caption;
+	font-size: 1rem;
+	line-height: 1.3;
+}
+
+a {
+	color: #ff6c2d;
+}
+
+a:hover, a:focus {
+	color: #e73a35;
+	text-decoration: none;
+}
+
+h1 {
+	color: #431832;
+	font-family: 'matosans';
+	font-size: 2.2rem;
+	line-height: 1.2;
+	margin-top: 0;
+	text-align: center;
 }
 
 main {
@@ -29,81 +42,230 @@ p {
 	font-size: 1rem;
 }
 
-#logo-graphic-container {
-	height: 100vh;
-	left: -200px;
+.content-container {
+	padding: 1.2em;
 	position: absolute;
-	top: -20px;
+	top: 38vh;
+}
+
+.graphic-container {
+	align-items: center;
+	background: radial-gradient(circle, #511b3c, #431832);
+	display: flex;
+	height: 38vh;
+	justify-content: center;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
 	width: 100vw;
 }
 
+.icon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin: -25px;
+}
+
+.icon-1 {
+	animation: rotate1 14s infinite linear;
+}
+
+.icon-2 {
+	animation: rotate2 14s infinite linear;
+}
+
+.icon-3 {
+	animation: rotate3 14s infinite linear;
+}
+
+.icon-4 {
+	animation: rotate4 14s infinite linear;
+}
+
+.icon-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+@keyframes rotate1 {
+from {
+	transform: rotate(0deg)
+	           translate(-120px)
+	           rotate(0deg);
+}
+to {
+	transform: rotate(360deg)
+	           translate(-120px) 
+	           rotate(-360deg);
+}
+}
+
+@keyframes rotate2 {
+from {
+	transform: rotate(0deg)
+	           translate(0px, 120px)
+	           rotate(0deg);
+}
+to {
+	transform: rotate(360deg)
+	           translate(0px, 120px) 
+	           rotate(-360deg);
+}
+}
+
+@keyframes rotate3 {
+from {
+	transform: rotate(0deg)
+	           translate(120px)
+	           rotate(0deg);
+}
+to {
+	transform: rotate(360deg)
+	           translate(120px) 
+	           rotate(-360deg);
+}
+}
+
+@keyframes rotate4 {
+from {
+	transform: rotate(0deg)
+	           translate(0px, -120px)
+	           rotate(0deg);
+}
+to {
+	transform: rotate(360deg)
+	           translate(0px, -120px) 
+	           rotate(-360deg);
+}
+}
 .main-logo {
 	display: block;
-	max-width: 150px;
+	width: 150px;
 }
 
-.icon-1 { 
-	width: 100px; 
-	height: 100px; 
-	transform-origin: 200% center; 
-	position: absolute; 
-	animation: rotate 3s linear infinite; 
-}
-.icon-1:before { 
-	border-radius: 50%;
-	content: ''; 
-	position: absolute; 
-	height: 100%; 
-	width: 100%; 
-	background: #fcc; 
-	animation: rotate 3s linear reverse infinite; 
-}
 
-.ring {
-	border: 1px solid #ddd;
-	border-radius: 50%;
-	height: auto;
-	position: absolute;
-
-}
-
-.ring-1 {
-	left: -10%;
-	padding-top: 100%;
-	top: 0%;
-	width: 100%;
-}
-
-.ring-2 {
-	left: -10%;
-	width: 120%;
-	padding-top: 120%;
-	top: -5%;
-}
-
-.ring-3 {
-	left: -20%;
-	width: 150%;
-	padding-top: 150%;
-	top: -10%;
-}
-
-.ring-4 {
-	left: -30%;
-	width: 180%;
-	padding-top: 180%;
-	top: -15%;
-}
-
-@keyframes rotate { 
-	100% { 
-		transform:rotate(-360deg); 
-	} 
-}
-
-@media screen and (min-width: 600px) {
-	body {
-		font-size: 20px;
-		line-height: 1.3;
+@media screen and (min-width: 700px) {
+	h1 {
+		font-size: 4rem;
+		text-align: left;
 	}
+
+	p {
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+
+	.content-container {
+		box-sizing: border-box;
+		height: 100vh;
+		overflow: scroll;
+		padding: 2em;
+		position: absolute;
+		left: 0%;
+		max-width: 50%;
+		top: 0px;
+	}
+
+	.graphic-container {
+		align-items: center;
+		background: radial-gradient(circle, #511b3c, #431832);
+		display: flex;
+		height: 100vh;
+		left: 50%;
+		justify-content: center;
+		overflow: hidden;
+		position: absolute;
+		width: 50vw;
+	}
+
+	.icon {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin: -40px;
+	}
+
+	.icon-1 {
+		animation: rotate1 14s infinite linear;
+	}
+
+	.icon-2 {
+		animation: rotate2 14s infinite linear;
+	}
+
+	.icon-3 {
+		animation: rotate3 14s infinite linear;
+	}
+
+	.icon-4 {
+		animation: rotate4 14s infinite linear;
+	}
+
+
+	.icon-container {
+		left: 50%;
+		top: 50%;
+	}
+
+	@keyframes rotate1 {
+	from {
+		transform: rotate(0deg)
+		           translate(-210px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-210px) 
+		           rotate(-360deg);
+	}
+}
+
+	@keyframes rotate2 {
+	from {
+		transform: rotate(0deg)
+		           translate(0px, 210px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(0px, 210px) 
+		           rotate(-360deg);
+	}
+}
+
+	@keyframes rotate3 {
+	from {
+		transform: rotate(0deg)
+		           translate(210px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(210px) 
+		           rotate(-360deg);
+	}
+}
+
+	@keyframes rotate4 {
+	from {
+		transform: rotate(0deg)
+		           translate(0px, -210px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(0px, -210px) 
+		           rotate(-360deg);
+	}
+}
+	.main-logo {
+		width: 275px;
+	}
+
 }
