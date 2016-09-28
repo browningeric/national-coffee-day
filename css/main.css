@@ -29,7 +29,8 @@ h1 {
 	font-family: 'matosans';
 	font-size: 2.2rem;
 	line-height: 1.2;
-	margin-top: 0;
+	margin: 0 auto .5em auto;
+	max-width: 370px;
 	text-align: center;
 }
 
@@ -45,14 +46,14 @@ p {
 .content-container {
 	padding: 1.2em;
 	position: absolute;
-	top: 38vh;
+	top: 33.3vh;
 }
 
 .graphic-container {
 	align-items: center;
 	background: radial-gradient(circle, #511b3c, #431832);
 	display: flex;
-	height: 38vh;
+	height: 33.3vh;
 	justify-content: center;
 	overflow: hidden;
 	position: absolute;
@@ -60,234 +61,18 @@ p {
 	width: 100vw;
 }
 
-.icon {
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	top: 0px;
-	left: 50%;
-	margin: -25px;
-}
-
-.icon-1 {
-	animation: rotate1 14s infinite linear;
-}
-
-.icon-2 {
-	animation: rotate2 14s infinite linear;
-}
-
-.icon-3 {
-	animation: rotate3 14s infinite linear;
-}
-
-.icon-4 {
-	animation: rotate4 14s infinite linear;
-}
-
-.icon-container {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-}
-
-@keyframes rotate1 {
-from {
-	transform: rotate(0deg)
-	           translate(-120px)
-	           rotate(0deg);
-}
-to {
-	transform: rotate(360deg)
-	           translate(-120px)
-	           rotate(-360deg);
-}
-}
-
-@keyframes rotate2 {
-from {
-	transform: rotate(0deg)
-	           translate(0px, 120px)
-	           rotate(0deg);
-}
-to {
-	transform: rotate(360deg)
-	           translate(0px, 120px)
-	           rotate(-360deg);
-}
-}
-
-@keyframes rotate3 {
-from {
-	transform: rotate(0deg)
-	           translate(120px)
-	           rotate(0deg);
-}
-to {
-	transform: rotate(360deg)
-	           translate(120px)
-	           rotate(-360deg);
-}
-}
-
-@keyframes rotate4 {
-from {
-	transform: rotate(0deg)
-	           translate(0px, -120px)
-	           rotate(0deg);
-}
-to {
-	transform: rotate(360deg)
-	           translate(0px, -120px)
-	           rotate(-360deg);
-}
-}
-.main-logo {
-	display: block;
-	width: 150px;
-}
-
-
-@media screen and (min-width: 700px) {
-	h1 {
-		font-size: 4rem;
-		text-align: left;
-	}
-
-	p {
-		font-size: 1.2rem;
-		line-height: 1.4;
-	}
-
-	.content-container {
-		box-sizing: border-box;
-		height: 100vh;
-		overflow: scroll;
-		padding: 2em;
-		position: absolute;
-		left: 0%;
-		max-width: 50%;
-		top: 0px;
-	}
-
-	.graphic-container {
-		align-items: center;
-		background: radial-gradient(circle, #511b3c, #431832);
-		display: flex;
-		height: 100vh;
-		left: 50%;
-		justify-content: center;
-		overflow: hidden;
-		position: absolute;
-		width: 50vw;
-	}
-
-	.icon {
-		width: 80px;
-		height: 80px;
-		position: absolute;
-		top: 0px;
-		left: 50%;
-		margin: -40px;
-	}
-
-	.icon-1 {
-		animation: rotate1 14s infinite linear;
-	}
-
-	.icon-2 {
-		animation: rotate2 14s infinite linear;
-	}
-
-	.icon-3 {
-		animation: rotate3 14s infinite linear;
-	}
-
-	.icon-4 {
-		animation: rotate4 14s infinite linear;
-	}
-
-
-	.icon-container {
-		left: 50%;
-		top: 50%;
-	}
-
-	@keyframes rotate1 {
-	from {
-		transform: rotate(0deg)
-		           translate(-210px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-210px)
-		           rotate(-360deg);
-	}
-}
-
-	@keyframes rotate2 {
-	from {
-		transform: rotate(0deg)
-		           translate(0px, 210px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(0px, 210px)
-		           rotate(-360deg);
-	}
-}
-
-	@keyframes rotate3 {
-	from {
-		transform: rotate(0deg)
-		           translate(210px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(210px)
-		           rotate(-360deg);
-	}
-}
-
-	@keyframes rotate4 {
-	from {
-		transform: rotate(0deg)
-		           translate(0px, -210px)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(0px, -210px)
-		           rotate(-360deg);
-	}
-}
-	.main-logo {
-		width: 275px;
-	}
-
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: #2E3445;
+.nobreak {
+    white-space: nowrap;
 }
 
 #orbit-system {
   position: relative;
-  width: 18em;
-  height: 18em;
+  width: 20em;
+  height: 20em;
   margin: 0 auto;
 }
 
-.system, .system2 {
+.system, .system2, .system3, .system4 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -307,35 +92,44 @@ body {
   transform: rotateX(75deg) rotateY(30deg);
 }
 
+.system3 {
+  -webkit-transform: rotateX(285deg) rotateY(30deg);
+  transform: rotateX(285deg) rotateY(30deg);
+}
+
+.system4 {
+  -webkit-transform: rotateX(285deg) rotateY(-30deg);
+  transform: rotateX(285deg) rotateY(-30deg);
+}
+
 .planet, .satellite-orbit, .satellite {
   position: absolute;
   top: 50%;
   left: 50%;
-
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 .planet {
   background-color: #511b3c;
-  width: 9em;
-  height: 9em;
-  margin-top: -4.5em;
-  margin-left: -4.5em;
+  width: 10em;
+  height: 10em;
+  margin-top: -5em;
+  margin-left: -5em;
   border-radius: 50%;
 
   text-align: center;
-  line-height: 9em;
+  line-height: 10em;
 
   -webkit-transform: rotateY(30deg) rotateX(-75deg);
   transform: rotateY(30deg) rotateX(-75deg);
 }
 
 .satellite-orbit {
-	width: 16em;
-  height: 16em;
-  margin-top: -8em;
-  margin-left: -8em;
+  width: 13em;
+  height: 14em;
+  margin-top: -6.5em;
+  margin-left: -6.5em;
 
   -webkit-animation-name: orbit;
   animation-name: orbit;
@@ -348,7 +142,11 @@ body {
 }
 
 .satellite {
-  top: 100%;
+  right: auto;
+  top: auto;
+  left: auto;
+  bottom: auto;
+
   width: 3em;
   height: 3em;
   margin-top: -1.5em;
@@ -369,16 +167,32 @@ body {
 
 .system2 .satellite {
     top: auto;
-    bottom: 100%;
+    /*bottom: 100%;*/
 
     -webkit-animation-name: invert-orbit2;
   animation-name: invert-orbit2;
   -webkit-animation-duration: 10s;
   animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+}
+
+.system3 .satellite {
+    top: auto;
+    /*left: 100%;*/
+
+    -webkit-animation-name: invert-orbit3;
+  animation-name: invert-orbit3;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.system4 .satellite {
+    top: auto;
+    /*right: 100%;*/
+
+    -webkit-animation-name: invert-orbit4;
+  animation-name: invert-orbit4;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
 }
 
 @-webkit-keyframes orbit {
@@ -438,4 +252,96 @@ The rotateX/Y reversal is easy since it's not animated, so just use its opposite
     100% {
         transform: rotateZ(0deg) rotateY(-30deg) rotateX(-75deg);
     }
+}
+
+@keyframes invert-orbit3 {
+    0% {
+        transform: rotateZ(360deg) rotateY(-30deg) rotateX(-285deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg) rotateY(-30deg) rotateX(-285deg);
+    }
+}
+
+
+@keyframes invert-orbit4 {
+    0% {
+        transform: rotateZ(360deg) rotateY(30deg) rotateX(-285deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg) rotateY(30deg) rotateX(-285deg);
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+	h1 {
+		font-size: 4rem;
+		margin: 0 0 .75em 0;
+		max-width: none;
+		text-align: left;
+	}
+
+	p {
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+
+	.content-container {
+		box-sizing: border-box;
+		height: 100vh;
+		overflow: scroll;
+		padding: 2em;
+		position: absolute;
+		left: 0%;
+		max-width: 50%;
+		top: 0px;
+	}
+
+	.graphic-container {
+		align-items: center;
+		background: radial-gradient(circle, #511b3c, #431832);
+		display: flex;
+		height: 100vh;
+		left: 50%;
+		justify-content: center;
+		overflow: hidden;
+		position: absolute;
+		width: 50vw;
+	}
+
+	.main-logo {
+		width: 275px;
+	}
+
+	.planet {
+	  width: 20em;
+	  height: 20em;
+	  margin-top: -10em;
+	  margin-left: -10em;
+	  line-height: 20em;
+	}
+
+	#orbit-system {
+	  width: 40em;
+	  height: 40em;
+	}
+
+	.satellite {
+	  width: 6em;
+	  height: 6em;
+	  margin-top: -3em;
+	  margin-left: -3em;
+	  line-height: 6em;
+	}
+
+	.satellite-orbit {
+	  width: 26em;
+	  height: 26em;
+	  margin-top: -13em;
+	  margin-left: -13em;
+	}
+
 }
